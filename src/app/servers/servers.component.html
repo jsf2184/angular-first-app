@@ -1,0 +1,20 @@
+<h3>
+  Lots of servers!
+</h3>
+
+<label>Server Name</label>
+<input
+  type = "text"
+  class = "form-control"
+  (input) = "onFormServerName($event)">
+
+<button (click) = "onCreateServer()" class="btn btn-primary" [disabled]="!isNewServerAllowed()">
+  Add Server
+</button>
+<p [innerText]="getAllowedString()"></p>
+<!--<p> {{getAllowedString()}}</p>-->
+<!--<p>Hello there</p>-->
+<h3> Latest Server Name is: {{newServerName}} </h3>
+<p>{{getCreateCountString()}}</p>
+<app-server></app-server>
+<app-server></app-server>
